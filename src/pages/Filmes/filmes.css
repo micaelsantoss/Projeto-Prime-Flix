@@ -1,0 +1,170 @@
+h1{
+    color: white;
+}
+
+.container-filme{
+    width: 100%;
+    height: calc(100vh - 107px);
+}
+
+.imgfundo img{
+    filter: brightness(0.4);
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 107px);
+    object-fit: cover;
+}
+
+.container-filme .informacoes{
+    position: absolute;
+    top: 55%;           
+    left: 50%;           
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.container-filme .informacoes .itens{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.container-filme .informacoes img{
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 25px;
+}
+
+.container-filme .informacoes .itens .area-butons{
+    display: flex;
+    gap: 15px;
+}
+
+.container-filme .informacoes .itens .area-butons a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #012E40;
+    width: 100px;
+    transition: 0.5s;
+}
+
+.container-filme .informacoes .itens .area-butons a:hover{
+    cursor: pointer;
+    background-color: #0081b4;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1079px){
+    .container-filme .imgfundo img{
+        height: calc(100vh + 80px);
+        object-fit: cover;
+        position: fixed;
+    }
+
+    .container-filme .informacoes{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 100px;
+        top: 52%;           
+        width: 90%;
+    }
+
+    .container-filme .informacoes img{
+        width: 42%;
+        height: 600px;
+        margin-top: 50px;
+        
+    }
+
+    .container-filme .informacoes .itens{
+        width: 80%;
+    }
+
+    .container-filme .informacoes .itens h1{
+        font-size: 50px;
+    }
+
+    .container-filme .informacoes .itens p{
+        text-align: justify;
+        padding-top: 10px;
+        font-size: 25px;
+    }
+
+    .container-filme .informacoes .itens strong, h3{
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container-filme .imgfundo img{
+        height: calc(100vh + 80px);
+        object-fit: cover;
+        position: fixed;
+    }
+
+    .container-filme .informacoes{
+        top: 52%;           
+        width: 90%;
+    }
+
+    .container-filme .informacoes{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        gap: 50px;
+        top: 52%;           
+        width: 90%;
+    }
+
+    .container-filme .informacoes img{
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    .container-filme .informacoes .itens{
+        width: 60%;
+    }
+
+    .container-filme .informacoes .itens p{
+        text-align: justify;
+        padding-top: 10px;
+    }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px){
+    .container-filme .imgfundo img{
+        height: calc(100vh + 80px);
+        object-fit: cover;
+        position: fixed;
+    }
+
+    .container-filme .informacoes{
+        flex-direction: column;
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+
+    .container-filme .informacoes img{
+        width: 70%;
+        height: 300px;
+        margin-top: 250px;
+        margin-bottom: 50px;
+    }
+
+    .container-filme .informacoes .itens{
+        width: 90%;
+        align-items: center;
+    }
+}

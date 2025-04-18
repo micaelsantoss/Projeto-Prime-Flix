@@ -1,0 +1,45 @@
+.lista-filmes-search{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
+}
+
+.lista-filmes-search article{
+    width: 160px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin: auto;
+    padding-bottom: 30px;
+    padding-top: 25px;
+}
+
+.lista-filmes-search strong{
+    margin: auto;
+    display: flex;
+    font-size: 12px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lista-filmes-search img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+}
+.lista-filmes-search a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    background-color: #012E40;
+}

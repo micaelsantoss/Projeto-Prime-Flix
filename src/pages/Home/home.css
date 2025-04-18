@@ -1,0 +1,166 @@
+.title{
+    color: white;
+    padding-left: 25px;
+    padding-bottom: 15px;
+}
+
+.lista-filmes{
+    margin: 0 auto; 
+    padding-bottom: 70px;
+    max-width: 1280px;
+}
+
+.lista-filmes article{
+    width: 160px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.lista-filmes strong{
+    margin: auto;
+    display: flex;
+    font-size: 12px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.lista-filmes img{
+    width: 100%;
+    height: 200px;
+    border-radius: 20px 20px 0px 0px;
+}
+.lista-filmes a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 0px 0px 15px 15px;
+    background-color: #012E40;
+}
+
+.slide-item{
+    height: 300px;
+    position: relative;
+    border-radius: 25px;
+    transition: border-radius 0.3s ease-in-out
+}
+
+.slide-principal{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-radius: 25px;
+    max-width: 1250px;
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide-principal article div{
+    color: white;
+    max-width: 800px;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide-principal article div h2{
+    padding-bottom: 20px;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.slide-principal article div p{
+    padding-bottom: 40px;
+}
+
+.slide-principal article div a{
+    background-color: #012E40;
+    color: white;
+    text-decoration: none;
+    padding: 10px 50px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.slide-principal article div a:hover{
+    background-color: #0081b4;
+}
+
+.slide-principal .info-block{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.slide-principal img{
+    height: 300px;
+    border-radius: 25px;
+    width: 100%;
+    object-fit: cover top;
+    transition: 0.5s;
+}
+
+#slide-item img.darkened {
+    filter: brightness(0.4);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .slide-principal article div h2{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    .slide-principal article div p{
+        font-size: 15px;
+        padding-bottom: 25px;
+    }
+
+    .lista-filmes article{
+        width: 110px;
+        height: 190px; 
+        
+    }
+    
+    .lista-filmes a{
+        font-size: 10px;
+        padding: 8px 0;    
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px){
+
+    .slide-principal article div h2{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+
+    .slide-principal article div p{
+        font-size: 15px;
+        padding-bottom: 25px;
+    }
+
+    .lista-filmes article{
+        width: 110px;
+        height: 190px; 
+    }
+    
+    .lista-filmes a{
+        font-size: 10px;
+        padding: 8px 0;    
+    }
+}

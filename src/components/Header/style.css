@@ -1,0 +1,303 @@
+header{
+    display: flex;
+    padding: 30px;
+    background: linear-gradient(to right , #012E40, #3CA6A6);
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.blocodireita{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.search form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blocodireita .value-search{
+    padding: 10px;
+    border-radius: 6px 0px 0px 6px;
+    border: none;
+    background-color: #012E40;
+    width: 500px;
+    outline: none;
+    font-size: 15px;
+}
+
+header .blocodireita .button-search{
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 0px 6px 6px 0px;
+    font-size: 15px;
+}
+
+.blocodireita .button-search:hover{
+    cursor: pointer;
+}
+
+header .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .favoritos{
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: white;
+    padding: 9.5px;
+    border-radius: 6px;
+    font-weight: 900;
+    color: black;
+    transition: 0.3s;
+}
+
+header .favoritos:hover{
+    background-color: #012E40;
+    color: white;
+}
+
+header .login-register{
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: white;
+    padding: 9.5px;
+    border-radius: 6px;
+    font-weight: 900;
+    color: black;
+    transition: 0.3s;
+}
+
+header .login-register:hover{
+    background-color: #012E40;
+    color: white;
+}
+
+header .button-logout{
+    margin-right: 60px;
+    text-decoration: none;
+    background-color: white;
+    padding: 9.5px;
+    border-radius: 6px;
+    font-weight: 900;
+    color: black;
+    transition: 0.3s;
+    width: 80px;
+    text-align: center;
+}
+
+header .button-logout:hover{
+    background-color: #012E40;
+    color: white;
+    cursor: pointer;
+}
+
+header .menu-hamburguer{
+    display: none;
+}
+
+header .button-hamburguer{
+    display: none;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1080px){
+    header{
+        height: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    header .logo{
+        font-size: 25px;
+        padding-left: 0px;
+        position: relative;
+    } 
+
+    header .blocodireita .value-search{
+        width: 470px; 
+        height: 7px;
+    }
+
+    header .blocodireita .search form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .blocodireita .button-search{
+        background-color: white;
+        color: black;
+        padding: 6px;
+        border-radius: 0px 6px 6px 0px;
+    }
+
+    .buttons .login-register{
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .buttons .favoritos{
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    header{
+        height: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    header .logo{
+        font-size: 25px;
+        padding-left: 0px;
+        position: relative;
+    } 
+
+    header .blocodireita .value-search{
+        width: 270px; 
+        height: 7px;
+    }
+
+    header .blocodireita .search form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .blocodireita .button-search{
+        background-color: white;
+        color: black;
+        padding: 6px;
+        border-radius: 0px 6px 6px 0px;
+    }
+
+    .buttons .login-register{
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .buttons .favoritos{
+        font-size: 10px;
+    }
+    
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px){
+    header{
+        height: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    header .logo{
+        font-size: 15px;
+        padding-left: 0px;
+        position: relative;
+    } 
+
+    header .blocodireita .value-search{
+        width: 120px; 
+        height: 4px;
+    }
+
+    header .blocodireita .search form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .blocodireita .button-search{
+        background-color: white;
+        color: black;
+        padding: 4px;
+        border-radius: 0px 6px 6px 0px;
+    }
+
+    header .favoritos{
+        z-index: 1500;
+        margin: 0;
+        width: 200px;
+        text-align: center;
+    }
+
+    header .login-register{
+        z-index: 1500;
+        margin: 0;
+        width: 200px;
+        text-align: center;
+    }
+
+    header .blocodireita .buttons{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        top: 80px;
+        right: 0px;
+        background-color: #3CA6A6;
+        z-index: 10000;
+        display: none;
+    }
+
+    header .menu-hamburguer{
+        background-color: #3CA6A6;
+        height: 280px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        margin: 0;
+        padding: 0;
+        width: 100%; 
+        transition: 10s;
+    }
+
+    header .active{
+        display: flex;
+    }
+    
+    header .blocodireita .active-button{
+        background-color: #012E40;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: fixed;
+        top: 80px;
+        right: 0px;
+        background-color: #3CA6A6;
+        z-index: 10000;
+        display: flex;
+    }
+
+    header .button-hamburguer{
+        display: block;
+        z-index: 3000;
+        left: 0;
+    }
+
+    header .active-button-hamburguer{
+        position: fixed;
+    }
+}
