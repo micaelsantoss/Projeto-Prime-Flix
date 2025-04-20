@@ -235,7 +235,6 @@ function Home(){
                         return(
                             <SwiperSlide key={filme.id}>
                                     <article key={filme.id}>
-                                        <strong>{filme.title}</strong>
                                         <img src={`http://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
                                         <Link to={`/filme/${filme.id}`}>Acessar</Link>
                                     </article>

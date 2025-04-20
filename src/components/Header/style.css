@@ -238,6 +238,13 @@ header .button-hamburguer{
         text-align: center;
     }
 
+    header .button-logout{
+        z-index: 1500;
+        margin: 0;
+        width: 200px;
+        text-align: center;   
+    }
+
     header .login-register{
         z-index: 1500;
         margin: 0;
@@ -294,7 +301,7 @@ header .button-hamburguer{
     header .button-hamburguer{
         display: block;
         z-index: 3000;
-        left: 0;
+        left: 10;
     }
 
     header .active-button-hamburguer{

@@ -75,8 +75,8 @@ function Header(){
                     </form>                     
                 </div>
                 <div id='buttons' className="buttons">
-                    <Link className='favoritos' to='/Favoritos'>Minha Lista</Link >
-                    <Link className='login-register' to='/Login'>Conecte-se</Link> 
+                    <Link onClick={hideMenu} className='favoritos' to='/Favoritos'>Minha Lista</Link >
+                    <Link onClick={hideMenu} className='login-register' to='/Login'>Conecte-se</Link> 
                     {user && (
                         <a className='button-logout' onClick={handleLogout}>Sair</a>
                     )}

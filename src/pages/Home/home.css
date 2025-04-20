@@ -145,13 +145,17 @@
 @media screen and (min-width: 300px) and (max-width: 767px){
 
     .slide-principal article div h2{
-        font-size: 25px;
+        font-size: 20px;
         padding-bottom: 10px;
     }
 
     .slide-principal article div p{
-        font-size: 15px;
-        padding-bottom: 25px;
+        font-size: 10px;
+        padding-bottom: 15px;
+    }
+    .slide-principal article div a{
+        font-size: 10px;
+        padding: 5px 30px;
     }
 
     .lista-filmes article{
