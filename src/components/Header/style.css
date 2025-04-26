@@ -302,6 +302,25 @@ header .button-hamburguer{
         display: block;
         z-index: 3000;
         left: 10;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+    }
+
+    header .close-menu{
+        display: none;
+    }
+
+    header .active-close-menu{
+        display: block;
+    }
+
+    header .active-open-menu{
+        display: none;
+    }
+
+    header .button-hamburguer svg{
+        width: 20px;
+        height: 20px;
     }
 
     header .active-button-hamburguer{

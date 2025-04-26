@@ -4,11 +4,15 @@ import './style.css';
 import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
+import { AlignJustify, X } from 'lucide-react';
 
 function Header(){
     const [query, setQuery] = useState();
     const { logout, user } = useAuth();
     const navigate = useNavigate();
+
+    const openMenu = <AlignJustify />;
+    const closeMenu = <X />;
 
     useEffect(() => {
         let buttonSign = document.querySelector('.login-register');
@@ -41,10 +45,14 @@ function Header(){
         let menuHamburguer = document.getElementById('menu-hamburguer');
         let buttons = document.getElementById('buttons');
         let buttonHamburguer = document.getElementById('button-hamburguer');
+        let openMenu = document.getElementById('open-menu');
+        let closeMenu = document.getElementById('close-menu');
 
         menuHamburguer.classList.toggle("active");
         buttons.classList.toggle("active-button");
         buttonHamburguer.classList.toggle("active-button-hamburguer");
+        openMenu.classList.toggle("active-open-menu");
+        closeMenu.classList.toggle("active-close-menu");
     }
 
     const handleChange= (e) => {
@@ -55,7 +63,10 @@ function Header(){
         <header>
             <div id='menu-hamburguer' className='menu-hamburguer'>
             </div>
-            <button id='button-hamburguer' className='button-hamburguer' onClick={hideMenu}>H</button>
+            <button id='button-hamburguer' className='button-hamburguer' onClick={hideMenu}>
+                <div id='open-menu' className='open-menu'>{openMenu}</div>
+                <div id='close-menu' className='close-menu'>{closeMenu}</div>
+            </button>
             
             <Link className='logo' to='/'>Prime Flix</Link>
             <div className='blocodireita'>
