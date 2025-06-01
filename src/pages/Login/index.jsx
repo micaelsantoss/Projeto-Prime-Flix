@@ -2,15 +2,18 @@ import { Link } from 'react-router-dom';
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-import './style.css'
+import './styleLogin.css'
 import { toast } from 'react-toastify';
 import { useState } from 'react';
+import { X } from 'lucide-react';
 
 function Login(){
     const { login, loginNormal } = useAuth();
     const navigate = useNavigate();
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
+
+    const closeMenuLogin = <X />;
 
     const handleLogin = async () => {
         await login();
@@ -43,33 +46,49 @@ function Login(){
         <div className="container-login">
             
             <div className="block-login">
-                <button className='close' onClick={() => navigate(-1)}>Fechar</button>
-                <h1>Entrar</h1>
-                <form onSubmit={handleLoginNormal}>
-                    <label>Email</label>
-                    <input
-                        required
-                        type="email" 
-                        placeholder="Digite seu email" 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    /> <br />
 
-                    <label>Senha</label>
-                    <input 
-                        required
-                        type="password" 
-                        placeholder="Digite sua senha" 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    /> <br />
+                <div className="close">
+                    <button className='closeMenuLogin' onClick={() => navigate('/')}>{closeMenuLogin}</button>
+                </div>
 
-                    <button type="submit">Entrar</button>
-                </form>
+                <div className="left">
+                    <h1>Olá</h1>
+                    <h1>Seja bem vindo!</h1>
+                </div>
 
-                <p>Ainda não tem uma conta? <Link to="/Register">Registre-se agora</Link></p>
+                <div className="right">
+                    <h1>Faça seu Login</h1>
+                    <form onSubmit={handleLoginNormal}>
+                        <label>Email</label><br />   
+                        <input
+                            required
+                            type="email" 
+                            placeholder="Digite seu email" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        /> <br />
 
-                <button onClick={handleLogin}>Entre com o google</button><br />
+                        <label>Senha</label><br />
+                        <input 
+                            required
+                            type="password" 
+                            placeholder="Digite sua senha" 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        /> <br />
+
+                        <button className='submit' type="submit">Entrar</button>
+                    </form>
+
+                    <button className='buttonGoogle' onClick={handleLogin}>Entre com o google</button>
+
+                    <div className="register">
+                        <p>Ainda não tem uma conta? </p>
+                        <Link to="/Register" >Registre-se agora</Link>
+                    </div>
+                    
+                </div>
+                
             </div>
             
         </div>

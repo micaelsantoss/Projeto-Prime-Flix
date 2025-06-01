@@ -1,0 +1,173 @@
+.container-register {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+  }
+
+.block-register{
+  display: flex;
+  height: 450px;
+  width: 800px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.left{
+  background-color: aqua;
+  width: 55%;
+}
+
+.block-register .right{
+  background-color: #001d3d;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.block-register .right form{
+  width: 300px;
+}
+
+.close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close .closeMenuRegister{
+  border: none;
+  background-color: #001d3d;
+  color: #e0e1dd;
+}
+
+.close .closeMenuRegister:hover{
+  cursor: pointer;
+}
+
+.right h1{
+  color: blue;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right label{
+  color: rgba(0, 0, 0, 0.527);
+}
+
+.right input{
+  border: none;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 10px;
+  width: 280px;
+  margin-bottom: 10px;
+}
+
+.right .submit{
+  width: 300px;
+  border: none;
+  background-color: #1e1e1e;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.right .submit:hover{
+  cursor: pointer;
+}
+
+.block-register a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.login{
+  width: 300px;
+  display: flex;
+  gap: 5px;
+  padding-bottom: 15px;
+}
+
+.login p{
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.411);
+  padding-top: 10px;
+}
+
+.login a{
+  color: #e0e1dd;
+  font-size: 12px;
+  padding-top: 10px;
+}
+.login a:hover{
+  color: rgb(155, 0, 0);
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px){
+  .block-register{
+    flex-direction: column;
+    width: 270px;
+    height: 480px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .block-register .close .closeMenuRegister{
+    background-color: aqua;
+  }
+
+  .block-register .left{
+    width: 100%;
+    height: 139px;
+  }
+
+  .block-register .right{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 341px;
+  }
+
+  .block-register .right form{
+    width: 230px;
+  }
+
+  .right h1{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+  }
+
+  .right input{
+    width: 210px;
+  }
+
+  .right .submit{
+    width: 230px;
+    margin-bottom: 5px;
+  }
+
+  .login{
+    width: 230px;
+  }
+}

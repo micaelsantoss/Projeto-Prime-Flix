@@ -1,14 +1,17 @@
 import { Link, useNavigate } from 'react-router-dom';
-import './style.css'
+import './styleRegister.css';
 import { useAuth } from '../../contexts/AuthContext';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import { X } from 'lucide-react';
 
 function Register(){
     const { register } = useAuth();
     const navigate = useNavigate();
     const [ email, setEmail ] = useState('');
     const [ password, setPassword ] = useState('');
+
+    const closeMenuRegister = <X />;
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -24,30 +27,51 @@ function Register(){
 
     return(
         <div className="container-register">
-            <h1>Cadastro</h1>
-            <form onSubmit={handleRegister}>
-                <label>Email</label>
-                <input
-                    required
-                    type="email" 
-                    placeholder="Digite seu email" 
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
 
-                <label>Senha</label>
-                <input 
-                    required
-                    type="password" 
-                    placeholder="Digite sua senha" 
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+            <div className="block-register">
 
-                <button type="submit">Cadastrar</button>
-            </form>
+                <div className="close">
+                    <button className='closeMenuRegister' onClick={() => navigate('/')}>{closeMenuRegister}</button>
+                </div>
 
-            <p>Já tem uma conta? <Link to="/Login">Faça login</Link></p>
+                <div className="left">
+                    <h1>Olá</h1>
+                    <h1>Seja bem vindo!</h1>
+                </div>
+
+                <div className="right">
+                    <h1>Registre-se</h1>
+                    <form onSubmit={handleRegister}>
+                        <label>Email</label><br />
+                        <input
+                            required
+                            type="email" 
+                            placeholder="Digite seu email" 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        /> <br />
+
+                        <label>Senha</label><br />
+                        <input 
+                            required
+                            type="password" 
+                            placeholder="Digite sua senha" 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        /> 
+
+                        <button className='submit' type="submit">Cadastrar</button>
+                    </form>
+
+                    <div className="login">
+                        <p>Já tem uma conta? </p>
+                        <Link to="/Login">Faça login</Link>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
         </div>
     )
 }

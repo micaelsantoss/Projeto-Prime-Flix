@@ -41,5 +41,9 @@
     justify-content: center;
     width: 100%;
     border-radius: 0px 0px 15px 15px;
-    background-color: #012E40;
+    background-color: #001d3d;
+}
+
+.lista-filmes-search a:hover{
+    background-color: #003566;
 }

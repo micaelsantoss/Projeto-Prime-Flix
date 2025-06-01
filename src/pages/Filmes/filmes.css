@@ -4,14 +4,14 @@ h1{
 
 .container-filme{
     width: 100%;
-    height: calc(100vh - 107px);
+    height: calc(100vh - 71px);
 }
 
-.imgfundo img{
+.container-filme .imgfundo img{
     filter: brightness(0.4);
     position: relative;
     width: 100%;
-    height: calc(100vh - 107px);
+    height: calc(100vh - 71px);
     object-fit: cover;
 }
 
@@ -56,14 +56,14 @@ h1{
     align-items: center;
     justify-content: center;
     border-radius: 15px;
-    background-color: #012E40;
+    background-color: #001d3d;
     width: 100px;
     transition: 0.5s;
 }
 
 .container-filme .informacoes .itens .area-butons a:hover{
     cursor: pointer;
-    background-color: #0081b4;
+    background-color: #003566;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1079px){

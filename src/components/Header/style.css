@@ -1,7 +1,7 @@
 header{
     display: flex;
-    padding: 30px;
-    background: linear-gradient(to right , #012E40, #3CA6A6);
+    padding: 15px 50px;
+    background-color: #001d3d;
     color: white;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,7 @@ header{
 header .logo{
     text-decoration: none;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bolder;
 }
 
@@ -30,22 +30,36 @@ header .logo{
     justify-content: center;
 }
 
-.blocodireita .value-search{
+.search{
+    background-color: #000814;
+    border-radius: 6px;
+}
+
+.blocodireita .search .value-search{
     padding: 10px;
     border-radius: 6px 0px 0px 6px;
     border: none;
-    background-color: #012E40;
+    background-color: #000814;
     width: 500px;
     outline: none;
     font-size: 15px;
+    color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #000814 inset !important;
+  transition: background-color 0s ease-in-out 0s;
 }
 
 header .blocodireita .button-search{
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 0px 6px 6px 0px;
-    font-size: 15px;
+    font-size: 10px;
+    padding-right: 10px;
+    color: rgba(255, 255, 255, 0.329);
+    background-color: #000814;
+    border: none;
 }
 
 .blocodireita .button-search:hover{
@@ -59,52 +73,58 @@ header .buttons{
 }
 
 header .favoritos{
+    width: 80px;
+    display: flex;
+    justify-content: center;
     margin-right: 20px;
     text-decoration: none;
-    background-color: white;
+    background-color: #000814;
     padding: 9.5px;
     border-radius: 6px;
-    font-weight: 900;
-    color: black;
+    font-weight: bold;
+    color: #E0E0E0;
     transition: 0.3s;
 }
 
 header .favoritos:hover{
-    background-color: #012E40;
-    color: white;
+    background-color: #003566;
+    color: #E0E0E0;
 }
 
 header .login-register{
     margin-right: 20px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    background-color: white;
+    background-color: #000814;
     padding: 9.5px;
     border-radius: 6px;
-    font-weight: 900;
-    color: black;
+    font-weight: 100;
+    color: #E0E0E0;
     transition: 0.3s;
 }
 
 header .login-register:hover{
-    background-color: #012E40;
+    background-color: #003566;
     color: white;
 }
 
 header .button-logout{
     margin-right: 60px;
     text-decoration: none;
-    background-color: white;
+    background-color: #000814;
     padding: 9.5px;
     border-radius: 6px;
     font-weight: 900;
-    color: black;
+    color: white;
     transition: 0.3s;
     width: 80px;
     text-align: center;
 }
 
 header .button-logout:hover{
-    background-color: #012E40;
+    background-color: #003566;
     color: white;
     cursor: pointer;
 }
@@ -166,14 +186,14 @@ header .button-hamburguer{
     }
 
     header .logo{
-        font-size: 25px;
+        font-size: 20px;
         padding-left: 0px;
         position: relative;
     } 
 
     header .blocodireita .value-search{
-        width: 270px; 
-        height: 7px;
+        width: 220px; 
+        height: 12px;
     }
 
     header .blocodireita .search form{
@@ -183,9 +203,7 @@ header .button-hamburguer{
     }
 
     header .blocodireita .button-search{
-        background-color: white;
-        color: black;
-        padding: 6px;
+        color: rgba(255, 255, 255, 0.226);
         border-radius: 0px 6px 6px 0px;
     }
 
@@ -203,6 +221,8 @@ header .button-hamburguer{
 @media screen and (min-width: 300px) and (max-width: 767px){
     header{
         height: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -225,8 +245,7 @@ header .button-hamburguer{
     }
 
     header .blocodireita .button-search{
-        background-color: white;
-        color: black;
+        color: rgba(255, 255, 255, 0.493);
         padding: 4px;
         border-radius: 0px 6px 6px 0px;
     }
@@ -253,22 +272,12 @@ header .button-hamburguer{
     }
 
     header .blocodireita .buttons{
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        position: fixed;
-        top: 80px;
-        right: 0px;
-        background-color: #3CA6A6;
-        z-index: 10000;
         display: none;
     }
 
     header .menu-hamburguer{
-        background-color: #3CA6A6;
-        height: 280px;
+        background-color: #001d3d;
+        height: 200px;
         position: fixed;
         top: 0;
         right: 0;
@@ -279,21 +288,19 @@ header .button-hamburguer{
         transition: 10s;
     }
 
-    header .active{
+    header .active-menu-hamburguer{
         display: flex;
     }
     
-    header .blocodireita .active-button{
-        background-color: #012E40;
+    header .blocodireita .active-button-header{
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
         gap: 20px;
         position: fixed;
-        top: 80px;
+        top: 55px;
         right: 0px;
-        background-color: #3CA6A6;
         z-index: 10000;
         display: flex;
     }

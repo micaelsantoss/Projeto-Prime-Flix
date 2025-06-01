@@ -8,7 +8,7 @@ function Home(){
     const [filmesEmAlta, setFilmesEmAlta] = useState([]);
     const [filmesPopulares, setFilmesEmAltaPopulares] = useState([]);
     const [filmesAcao, setFilmesAcao] = useState([]);
-    const [filmesRomance, setFilmesRomance] = useState([]);
+    const [filmesFiccaoCientifica, setFilmesFiccaoCientifica] = useState([]);
     const [series, setSeries] = useState([]);
     const [hoveredIndex, setHoveredIndex] = useState([]);
 
@@ -57,20 +57,20 @@ function Home(){
 
         loadFilmesAcao();
 
-        async function loadFilmesRomance() {
+        async function loadFilmesFiccaoCientifica() {
             const response = await api.get("/discover/movie", {
                 params:{
                     api_key: "db744f0ab09663b7c3961c079759a65b",
                     language: "pt-BR",
-                    with_genres: 10749,
+                    with_genres: 878,
                     page: 1,
                 }
             })
 
-            setFilmesRomance(response.data.results.slice(0, 20));
+            setFilmesFiccaoCientifica(response.data.results.slice(0, 20));
         }
 
-        loadFilmesRomance();
+        loadFilmesFiccaoCientifica();
 
         async function loadSeries() {
             const response = await api.get("/tv/popular", {
@@ -218,7 +218,7 @@ function Home(){
             </div>
 
             <div className="lista-filmes">
-            <h1 className="title">Romance</h1>
+            <h1 className="title">Ficcao Cientifica</h1>
                 <Swiper  
                     loop={true}
                     breakpoints={{
@@ -231,7 +231,7 @@ function Home(){
                         }
                     }}
                 > 
-                    {filmesRomance.map((filme) => {
+                    {filmesFiccaoCientifica.map((filme) => {
                         return(
                             <SwiperSlide key={filme.id}>
                                     <article key={filme.id}>

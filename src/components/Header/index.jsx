@@ -4,7 +4,7 @@ import './style.css';
 import { useAuth } from '../../contexts/AuthContext';
 import { toast } from 'react-toastify';
 import { useEffect } from 'react';
-import { AlignJustify, X } from 'lucide-react';
+import { AlignJustify, X, Search } from 'lucide-react';
 
 function Header(){
     const [query, setQuery] = useState();
@@ -13,6 +13,7 @@ function Header(){
 
     const openMenu = <AlignJustify />;
     const closeMenu = <X />;
+    const lupe = <Search />;
 
     useEffect(() => {
         let buttonSign = document.querySelector('.login-register');
@@ -31,10 +32,11 @@ function Header(){
         toast.success('Você desconectou!')
     }
 
-    function valueSearch(){
-        if(query == ''){
+    function valueSearch(e){
+        e.preventDefault();      
+        if(!query.trim()){
             toast.warn("Por favor, digite o filme desejado.");  
-        } else {
+        } else{
             localStorage.setItem('@value-search', JSON.stringify(query));
             setQuery('');
             navigate('/Search');
@@ -43,13 +45,13 @@ function Header(){
 
     function hideMenu(){
         let menuHamburguer = document.getElementById('menu-hamburguer');
-        let buttons = document.getElementById('buttons');
+        let buttonsHeader = document.getElementById('buttons');
         let buttonHamburguer = document.getElementById('button-hamburguer');
         let openMenu = document.getElementById('open-menu');
         let closeMenu = document.getElementById('close-menu');
 
-        menuHamburguer.classList.toggle("active");
-        buttons.classList.toggle("active-button");
+        menuHamburguer.classList.toggle("active-menu-hamburguer");
+        buttonsHeader.classList.toggle("active-button-header");
         buttonHamburguer.classList.toggle("active-button-hamburguer");
         openMenu.classList.toggle("active-open-menu");
         closeMenu.classList.toggle("active-close-menu");
@@ -71,8 +73,9 @@ function Header(){
             <Link className='logo' to='/'>Prime Flix</Link>
             <div className='blocodireita'>
                 <div className="search">                            
-                    <form >
+                    <form onSubmit={valueSearch}>
                         <input 
+                         autoComplete='off'
                             id='value-search' 
                             className='value-search' 
                             type="text" 
@@ -82,11 +85,11 @@ function Header(){
                             value={query}
                         />
                             
-                        <a className='button-search' type='submit' onClick={valueSearch}>Buscar</a>                 
+                        <button className='button-search' type='submit'>{lupe}</button>                 
                     </form>                     
                 </div>
                 <div id='buttons' className="buttons">
-                    <Link onClick={hideMenu} className='favoritos' to='/Favoritos'>Minha Lista</Link >
+                    <Link onClick={hideMenu} className='favoritos' to='/Favoritos'>Favoritos</Link >
                     <Link onClick={hideMenu} className='login-register' to='/Login'>Conecte-se</Link> 
                     {user && (
                         <a className='button-logout' onClick={handleLogout}>Sair</a>

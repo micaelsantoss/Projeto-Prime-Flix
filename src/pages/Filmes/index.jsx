@@ -3,19 +3,19 @@ import { useParams, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import { toast } from "react-toastify";
 import { db } from '../../services/firebase';
-import { collection, addDoc, setDoc, doc } from 'firebase/firestore';
+import { setDoc, doc } from 'firebase/firestore';
 import { useAuth } from "../../contexts/AuthContext.jsx";
 
 import './filmes.css';
 
 function Filme(){
-    const {id} = useParams();
+    const { id } = useParams();
     const [filme, setFilme] = useState({});
     //const [trailer, setTrailer] = useState({});
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
-    const { user, login } = useAuth();
+    const { user } = useAuth();
 
     useEffect(() => {
        /* async function carregarTrailer() {

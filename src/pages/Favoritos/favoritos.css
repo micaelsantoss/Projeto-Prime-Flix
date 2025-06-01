@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color:#012e40;
+    background-color:#001d3d;
     backdrop-filter: blur(10px);
     border-radius: 25px;
     margin-bottom: 10px;
@@ -53,6 +53,10 @@
     color: white;
 }
 
+.conteudo .info a:hover{
+    color: #000814;
+}
+
 .conteudo .info button{
     border: none;
     margin-right: 50px;
@@ -63,6 +67,7 @@
 }
 .conteudo .info button:hover{
     cursor: pointer;
+    color: #000814;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1080px){
