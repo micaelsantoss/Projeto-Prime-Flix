@@ -5,7 +5,7 @@ import './series.css'
 import { toast } from "react-toastify";
 
 import { db } from '../../services/firebase';
-import { collection, addDoc, setDoc, doc } from 'firebase/firestore';
+import { setDoc, doc } from 'firebase/firestore';
 import { useAuth } from "../../contexts/AuthContext.jsx";
 
 function Serie(){
@@ -66,6 +66,11 @@ function Serie(){
         </div>
     }
 
+    const limitarTexto = (texto, limite) => {
+    if (!texto) return 'Sinopse não disponível.';
+    return texto.length > limite ? texto.substring(0, limite) + '...' : texto;
+    };
+
     return(
         <div className="container-serie" id="container-serie">
             <div className="imgfundo">
@@ -75,7 +80,7 @@ function Serie(){
                 <div className="itens">
                     <h1>{serie.name}</h1> <br />
                     <h3>Sinopse:</h3> 
-                    <p>{serie.overview}</p><br />
+                    <p>{limitarTexto(serie.overview, 500)}</p><br />
                     <strong>{`Nota: ${Number(serie.vote_average).toFixed(1)} / 10`}</strong> <br />
                     <div className="area-butons">
 

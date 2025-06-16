@@ -169,7 +169,7 @@ function Home(){
                        1024:{
                            slidesPerView: 7
                        }, 768:{
-                           slidesPerView: 5
+                           slidesPerView: 6
                        }, 300:{
                            slidesPerView: 3
                        }
@@ -197,7 +197,7 @@ function Home(){
                         1024:{
                             slidesPerView: 7
                         }, 768:{
-                            slidesPerView: 5
+                            slidesPerView: 6
                         }, 300:{
                             slidesPerView: 3
                         }
@@ -225,7 +225,7 @@ function Home(){
                         1024:{
                             slidesPerView: 7
                         }, 768:{
-                            slidesPerView: 5
+                            slidesPerView: 6
                         }, 300:{
                             slidesPerView: 3
                         }
@@ -253,7 +253,7 @@ function Home(){
                         1024:{
                             slidesPerView: 7
                         }, 768:{
-                            slidesPerView: 5
+                            slidesPerView: 6
                         }, 300:{
                             slidesPerView: 3
                         }

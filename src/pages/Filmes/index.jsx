@@ -82,6 +82,11 @@ function Filme(){
         </div>
     }
 
+    const limitarTexto = (texto, limite) => {
+    if (!texto) return 'Sinopse não disponível.';
+    return texto.length > limite ? texto.substring(0, limite) + '...' : texto;
+    };
+
     return(
         <div className="container-filme" id="container-filme">
             <div className="imgfundo">
@@ -91,7 +96,7 @@ function Filme(){
                 <div className="itens">
                     <h1>{filme.title}</h1> <br />
                     <h3>Sinopse:</h3> 
-                    <p>{filme.overview}</p><br />
+                    <p>{limitarTexto(filme.overview, 500)}</p><br />
                     <strong>{`Nota: ${Number(filme.vote_average).toFixed(1)} / 10`}</strong> <br />
                     <div className="area-butons">
 

@@ -108,6 +108,10 @@ h1{
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
+    .container-filme{
+        position: relative;
+    }
+    
     .container-filme .imgfundo img{
         height: calc(100vh + 80px);
         object-fit: cover;
@@ -115,35 +119,37 @@ h1{
     }
 
     .container-filme .informacoes{
-        top: 52%;           
-        width: 90%;
-    }
-
-    .container-filme .informacoes{
-        flex-direction: column;
         flex-direction: column-reverse;
         gap: 50px;
-        top: 52%;           
+        top: 600px;           
         width: 90%;
+        position: absolute;
+        padding-bottom: 150px;
     }
 
     .container-filme .informacoes img{
-        height: 400px;
-        margin-top: 50px;
+        height: 500px;
+        width: 350px;
     }
 
     .container-filme .informacoes .itens{
-        width: 60%;
+        width: 80%;
     }
 
     .container-filme .informacoes .itens p{
         text-align: justify;
         padding-top: 10px;
+        font-size: 20px;
     }
 
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px){
+    .container-filme{
+        height: 900px;
+        position: relative;
+    }
+
     .container-filme .imgfundo img{
         height: calc(100vh + 80px);
         object-fit: cover;
@@ -151,15 +157,15 @@ h1{
     }
 
     .container-filme .informacoes{
-        flex-direction: column;
+        top: 50%;
         flex-direction: column-reverse;
         padding-bottom: 50px;
+        position: absolute;
     }
 
     .container-filme .informacoes img{
         width: 70%;
         height: 300px;
-        margin-top: 250px;
         margin-bottom: 50px;
     }
 

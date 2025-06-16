@@ -144,6 +144,10 @@ h1{
 }
 
 @media screen and (min-width: 300px) and (max-width: 767px){
+    .container-serie{
+        height: 900px;
+    }
+    
     .container-serie .imgfundo img{
         height: calc(100vh + 80px);
         object-fit: cover;
@@ -159,7 +163,6 @@ h1{
     .container-serie .informacoes img{
         width: 70%;
         height: 300px;
-        margin-top: 100px;
         margin-bottom: 50px;
     }
 

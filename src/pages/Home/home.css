@@ -136,7 +136,7 @@
     .lista-filmes article{
         width: 110px;
         height: 190px; 
-        
+        padding-bottom: 40px;
     }
     
     .lista-filmes a{
