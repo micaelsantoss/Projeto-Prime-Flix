@@ -36,10 +36,9 @@ function Header(){
         e.preventDefault();      
         if(!query.trim()){
             toast.warn("Por favor, digite o filme desejado.");  
-        } else{
-            localStorage.setItem('@value-search', JSON.stringify(query));
+        } else{ 
+            navigate('/Search?q=' + query);
             setQuery('');
-            navigate('/Search');
         }   
     }
 

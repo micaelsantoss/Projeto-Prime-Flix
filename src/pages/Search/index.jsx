@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import './search.css';
 import api from "../../services/api";
 
 function Search(){
-    const [search, setSearch] = useState([])
-
+    const [searchParams] = useSearchParams();
+    const query = searchParams.get("q");
+    const [search, setSearch] = useState([]);
+    
     useEffect(() => {
-        const valueSearch = localStorage.getItem('@value-search');
+        SearchMovie(query);
 
-        Search(valueSearch);
-
-        async function Search(valueSearch){
+        async function SearchMovie(query){
             const response = await api.get('/search/movie', {
                 params: {
                     api_key: "db744f0ab09663b7c3961c079759a65b",
-                    query: valueSearch,
+                    query: query,
                     language: "pt-BR",
                     page: 1,
                 }
@@ -25,7 +25,7 @@ function Search(){
            
         }
 
-}, [])
+    }, [query])
 
     return(
         
