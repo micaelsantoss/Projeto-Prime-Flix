@@ -23,8 +23,10 @@
 }
 
 .left{
-  background-color: aqua;
   width: 55%;
+  background-image: url("../../src/images/imageLogin-Register.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .block-register .right{

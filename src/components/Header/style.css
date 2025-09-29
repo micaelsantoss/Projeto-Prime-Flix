@@ -176,7 +176,7 @@ header .button-hamburguer{
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     header{
         height: 20px;
         padding-top: 20px;
@@ -207,12 +207,11 @@ header .button-hamburguer{
 
     header .blocodireita .buttons .login-register{
         margin: 200;
-        font-size: 10px;
+        font-weight: bolder;
     }
 
     header .blocodireita .buttons .button-logout{
         margin: 0;
-
     }
 }
 

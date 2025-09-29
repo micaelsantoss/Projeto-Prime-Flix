@@ -145,7 +145,14 @@ h1{
 
 @media screen and (min-width: 300px) and (max-width: 767px){
     .container-serie{
+        position: relative;
         height: 900px;
+    }
+
+    .informacoes{
+        position: absolute;
+        top: 60%;           
+        transform: translate(-50%, -50%);
     }
     
     .container-serie .imgfundo img{
@@ -169,5 +176,18 @@ h1{
     .container-serie .informacoes .itens{
         width: 90%;
         align-items: center;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1023px){
+     .container-serie{
+        position: relative;
+        height: 900px;
+    }
+    
+    .informacoes{
+        position: absolute;
+        top: 60%;           
+        transform: translate(-50%, -50%);
     }
 }

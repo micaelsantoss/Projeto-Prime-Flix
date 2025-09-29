@@ -52,8 +52,7 @@ function Login(){
                 </div>
 
                 <div className="left">
-                    <h1>Olá</h1>
-                    <h1>Seja bem vindo!</h1>
+                    
                 </div>
 
                 <div className="right">
