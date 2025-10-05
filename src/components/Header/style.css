@@ -70,20 +70,18 @@ header .buttons{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 header .favoritos{
     width: 80px;
-    display: flex;
-    justify-content: center;
-    margin-right: 20px;
     text-decoration: none;
     background-color: #000814;
     padding: 9.5px;
     border-radius: 6px;
-    font-weight: bold;
     color: #E0E0E0;
     transition: 0.3s;
+    text-align: center;
 }
 
 header .favoritos:hover{
@@ -91,11 +89,8 @@ header .favoritos:hover{
     color: #E0E0E0;
 }
 
-header .login-register{
-    margin-right: 20px;
+header .buttons .login-register{
     width: 80px;
-    display: flex;
-    justify-content: center;
     text-decoration: none;
     background-color: #000814;
     padding: 9.5px;
@@ -103,6 +98,7 @@ header .login-register{
     font-weight: 100;
     color: #E0E0E0;
     transition: 0.3s;
+    text-align: center;
 }
 
 header .login-register:hover{
@@ -206,7 +202,6 @@ header .button-hamburguer{
     }
 
     header .blocodireita .buttons .login-register{
-        margin: 200;
         font-weight: bolder;
     }
 

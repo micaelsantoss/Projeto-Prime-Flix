@@ -89,7 +89,7 @@ function Header(){
                 </div>
                 <div id='buttons' className="buttons">
                     <Link onClick={hideMenu} className='favoritos' to='/Favoritos'>Favoritos</Link >
-                    <Link onClick={hideMenu} className='login-register' to='/Login'>Conecte-se</Link> 
+                    <Link onClick={hideMenu} className='login-register' to='/Login'>Login</Link> 
                     {user && (
                         <a className='button-logout' onClick={handleLogout}>Sair</a>
                     )}
