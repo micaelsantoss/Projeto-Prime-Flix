@@ -24,7 +24,6 @@ function RoutesApp(){
                 <Route path='/Search' element={ <Search/> }/>
                 <Route path='/Register' element={ <Register/> }/>
                 <Route path='/Login' element={ <Login/> }/>
-
                 
                 <Route path='*' element={ <Erro/> }/>
             </Routes>

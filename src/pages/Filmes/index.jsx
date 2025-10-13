@@ -11,26 +11,13 @@ import './filmes.css';
 function Filme(){
     const { id } = useParams();
     const [filme, setFilme] = useState({});
-    //const [trailer, setTrailer] = useState({});
+    const [trailer, setTrailer] = useState({});
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
 
     const { user } = useAuth();
 
     useEffect(() => {
-       /* async function carregarTrailer() {
-            await api.get(`https://api.themoviedb.org/3/movie/1125899/videos?api_key=db744f0ab09663b7c3961c079759a65b&language=pt-BR&page=1"`, {
-            })
-            .then((response) => {
-                setTrailer(response)
-                console.log(response)
-            })
-            .catch(() => {
-                alert('deu erro')
-            })
-        } 
-
-        carregarTrailer(); */
 
         async function loadFilme() {
             await api.get(`/movie/${id}`,{
@@ -41,7 +28,6 @@ function Filme(){
             }) 
             .then((response) => {
                     setFilme(response.data);
-                    console.log(response)
                     setLoading(false);
             })
             .catch(() => {
@@ -56,6 +42,21 @@ function Filme(){
 
     }, [navigate, id]);
 
+    useEffect(() => {
+        carregarTrailer(); 
+    }, [])
+
+    async function carregarTrailer() {
+            await api.get(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=db744f0ab09663b7c3961c079759a65b&language=pt-BR`)
+            .then((response) => {
+                setTrailer(response.data.results[0].key)
+            })
+            .catch(() => {
+                alert('deu erro')
+            })
+    }
+    
+    console.log(trailer)
     
     async function salvarFilme(){
         if(!user) {
@@ -83,8 +84,8 @@ function Filme(){
     }
 
     const limitarTexto = (texto, limite) => {
-    if (!texto) return 'Sinopse não disponível.';
-    return texto.length > limite ? texto.substring(0, limite) + '...' : texto;
+        if (!texto) return 'Sinopse não disponível.';
+        return texto.length > limite ? texto.substring(0, limite) + '...' : texto;
     };
 
     return(
@@ -101,7 +102,7 @@ function Filme(){
                     <div className="area-butons">
 
                         <a onClick={salvarFilme}>Salvar</a>       
-                        <a href={`http://youtube.com/results?search_query=trailer ${filme.title}`} target="blank"  rel="external">
+                        <a href={`https://www.youtube.com/watch?v=${trailer}`} target="blank"  rel="external">
                             Trailer
                         </a>
                 
